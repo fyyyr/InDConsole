@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="InDConsole.js"></script>
+	</head>
+
+	<body>
+		<script>
+			var InDConsole = new InDConsole();
+			// 初始化
+			InDConsole.init({
+				width: 500,
+				headerHeight: 30,
+				bodyHeight: 600,
+				headerBKColor: '#666666',
+				bodyBKColor: '#eeeeee'
+			});
+			// 安装web端拖动功能
+			InDConsole.installWebDrag();
+			
+			// 移动位置
+			InDConsole.moveTo(100, 100);
+
+			InDConsole.log(null);
+			var unA;
+			InDConsole.log(unA);
+			InDConsole.log(12345);
+			InDConsole.log('12345');
+			InDConsole.log(true);
+			InDConsole.log(false);
+			
+			var strV = 'abcdef';
+			InDConsole.log(strV);
+
+			var testF = function(a, b, c) {
+				return a + b + c;
+			}
+			InDConsole.log(testF);
+			
+			var testObject = {
+				"stringV": "第一级",
+				numberV: 201801,
+				booleanV: true,
+				undefinedV: undefined,
+				nullV: null,
+				functionV: function(a, b, c) {
+					alert("第一级");
+				},
+				second: {
+					stringV: "第二级",
+					numberV: 2018012,
+					booleanV: false,
+					undefinedV: undefined,
+					functionV: function() {
+						alert("第二级");
+					},
+					third: {
+						stringV: "第三级",
+						numberV: 2018013,
+						booleanV: false,
+						undefinedV: undefined,
+						functionV: function() {
+							alert("第三级");
+						},
+					}
+				},
+				functionV2: function(a, b, c) {
+					alert("第一级");
+				},
+				second2: {
+					stringV: "第二级",
+					numberV: 2018012,
+					booleanV: false,
+					undefinedV: undefined,
+					functionV: function() {
+						alert("第二级");
+					},
+					third: {
+						stringV: "第三级",
+						numberV: 2018013,
+						booleanV: false,
+						undefinedV: undefined,
+						functionV: function() {
+							alert("第三级");
+						},
+					}
+				}
+			};
+			InDConsole.log(testObject);
+		</script>
+	</body>
+
+</html>
